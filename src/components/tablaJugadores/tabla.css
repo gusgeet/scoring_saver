@@ -1,0 +1,12 @@
+#table-players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#table-players tbody tr:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

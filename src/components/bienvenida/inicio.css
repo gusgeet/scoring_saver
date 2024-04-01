@@ -1,0 +1,50 @@
+main {
+  position: relative;
+}
+
+.contador-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contador-container input,
+.contador-container button {
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.bienvenida-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: fit-content;
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+}
+
+ul{
+  margin: 15px;
+  padding: 0;
+}
+
+.jugador-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jugador-remove {
+  color: red;
+}
