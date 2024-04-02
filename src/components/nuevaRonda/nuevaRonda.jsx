@@ -13,7 +13,7 @@ const NuevaRonda = () => {
     });
     mostrarNuevaronda(false)
   }
-
+  
   return (
     <section id="nuevaRonda">
       <div>

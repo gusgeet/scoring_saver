@@ -56,6 +56,11 @@ useScoreStore.subscribe(state => {
   localStorage.setItem("puntaje", JSON.stringify(state))
 })
 
-const initialState = JSON.parse(localStorage.getItem("puntaje")) 
+const initialState = JSON.parse(localStorage.getItem("puntaje")) || {
+  jugadores: [],
+  jugadorEditar: false,
+  iniciarJuego: true,
+  nuevaRonda: false,
+}
 
 const store = useScoreStore.setState(initialState)

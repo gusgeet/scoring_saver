@@ -9,7 +9,7 @@ import NuevaRonda from "../nuevaRonda/nuevaRonda";
 let nextId = 0;
 
 export default function welcome() {
-  const { jugadorEditar, iniciarJuego, nuevaRonda } = useScoreStore()
+  const { jugadorEditar, iniciarJuego, nuevaRonda } = useScoreStore() 
   return (
     <main>
       <Inscripcion />
