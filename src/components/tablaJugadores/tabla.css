@@ -1,12 +1,10 @@
 #table-players {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  width: 100%;
 }
 
-#table-players tbody tr:first-child {
+.section-tabla{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
+  width: 100%;
 }

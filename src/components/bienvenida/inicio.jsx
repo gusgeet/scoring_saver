@@ -9,19 +9,23 @@ import NuevaRonda from "../nuevaRonda/nuevaRonda";
 let nextId = 0;
 
 export default function welcome() {
-  const { jugadorEditar, iniciarJuego, nuevaRonda } = useScoreStore() 
-  return (
+  const { jugadorEditar, iniciarJuego, nuevaRonda } = useScoreStore()
+  return (<>
+    {
+      jugadorEditar || nuevaRonda? <div className="fondo-modal"></div> : null
+    }
     <main>
       <Inscripcion />
       {
         !iniciarJuego && <TablaJugadores />
       }
       {
-        jugadorEditar ? <Puntaje puntaje={jugadorEditar}/> : null 
+        jugadorEditar ? <Puntaje puntaje={jugadorEditar} /> : null
       }
       {
         nuevaRonda && <NuevaRonda />
       }
     </main>
+  </>
   );
 }

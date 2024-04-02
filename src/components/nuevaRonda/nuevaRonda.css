@@ -3,15 +3,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
   padding: 20px;
   background-color: #3f3f3f;
   display: flex;
   flex-direction: column;
+  border-radius: 12px;
   justify-content: center;
   align-items:center;
   gap: 20px;
+  z-index: 2;
 }
 
 #nuevaRonda div {
@@ -29,4 +29,5 @@
   place-content: center;
   text-align: left;
   gap: 10px;
+  align-items: center;
 }

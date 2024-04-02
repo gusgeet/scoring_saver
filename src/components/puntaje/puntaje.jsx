@@ -8,48 +8,49 @@ const Puntaje = (Jugador) => {
 
   const agregarPuntajeAJugador = (id) => {
     const puntajeASumar = Number(document.getElementById('agregarValor').value)
-    actualizarPuntaje(id, puntajeASumar)    
+    actualizarPuntaje(id, puntajeASumar)
     terminarEditar()
   }
   const cerrarModal = () => {
     terminarEditar()
-  } 
+  }
 
   return (
     <div className='puntaje-modal'>
       <h3>Agregar puntaje a {puntaje.nombre}</h3>
-      <section>
-        <label htmlFor='agregarValor'>Puntos</label>
-        <input id='agregarValor' type='number' min="1"  />
-      </section>
-      <button onClick={() => agregarPuntajeAJugador(puntaje.id)}>Agregar</button>
-      <table>
-        <thead>
-          <tr>
-            <th><label>Puntos del jugador</label></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            listaPuntos.length ?
-            listaPuntos.map((p, idx) => {
-              return (
-                <tr key={idx}>
-                  <td>{p}</td>
-                  <td></td>
-                </tr>
-              )
-            }) :
+      <div className='puntaje-agregar'>
+        <section>
+          <label htmlFor='agregarValor'>Puntos</label>
+          <input id='agregarValor' type='number' min="1" />
+        </section>
+        <button onClick={() => agregarPuntajeAJugador(puntaje.id)}>Agregar</button>
+      </div>
+        <table>
+          <thead>
             <tr>
-              <td>
-                <label>Sin puntos previos</label>
-              </td>
+              <th><label>Puntos del jugador</label></th>
+              <th></th>
             </tr>
-          }
-          
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {
+              listaPuntos.length ?
+                listaPuntos.map((p, idx) => {
+                  return (
+                    <tr key={idx}>
+                      <td>{p}</td>
+                      <td></td>
+                    </tr>
+                  )
+                }) :
+                <tr>
+                  <td>
+                    <label>Sin puntos previos</label>
+                  </td>
+                </tr>
+            }
+          </tbody>
+        </table>
       <button onClick={() => cerrarModal()}>Cerrar</button>
     </div>
   )

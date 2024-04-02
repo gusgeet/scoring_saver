@@ -1,6 +1,6 @@
 import React from "react";
 import { useScoreStore } from "../../store/scoreStore";
-
+import './tabla.css'
 const TablaJugadores = () => {
   const { jugadores, editarJugador, mostrarNuevaronda } = useScoreStore()
   
@@ -14,7 +14,7 @@ const TablaJugadores = () => {
 
 
   return (
-    <section>
+    <section className="section-tabla">
         <h2>Puntajes:</h2>
         <table id="table-players">
           <tbody>
