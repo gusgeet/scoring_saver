@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  
 }
 
 .logo {

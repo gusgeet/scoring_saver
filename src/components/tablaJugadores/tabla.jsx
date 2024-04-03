@@ -15,47 +15,55 @@ const TablaJugadores = () => {
 
   return (
     <section className="section-tabla">
-        <h2>Puntajes:</h2>
-        <table id="table-players">
-          <tbody>
-            <tr>
-              {
-                jugadores.map((a, idx) => {
-                  return <th key={idx}>
-                      <label>
-                        {a.nombre}
-                      </label>
-                    </th>
-                })
-              }
-            </tr>
-            <tr>
-            {
-              jugadores.map((a, idx) => {
-                return <td key={idx}>
-                  <label>
-                  {
-                    a.puntaje.reduce((acc, i) => acc + i, 0)
-                  }
-                  </label>
-                </td>
-              })
-            }
-            </tr>
-            <tr>
+        {jugadores.length > 0 ? 
+        <>
+          <h2>Puntajes:</h2>
+          <table id="table-players">
+            <tbody>
+              <tr>
+                {
+                  jugadores.map((a, idx) => {
+                    return <th key={idx}>
+                        <label>
+                          {a.nombre}
+                        </label>
+                      </th>
+                  })
+                }
+              </tr>
+              <tr>
               {
                 jugadores.map((a, idx) => {
                   return <td key={idx}>
-                    <button onClick={() => mostrarModalSuma(a)}>+</button>
+                    <label>
+                    {
+                      a.puntaje.reduce((acc, i) => acc + i, 0)
+                    }
+                    </label>
                   </td>
                 })
               }
-            </tr>
-          </tbody>
-        </table>
-        <section>
+              </tr>
+              <tr>
+                {
+                  jugadores.map((a, idx) => {
+                    return <td key={idx}>
+                      <button onClick={() => mostrarModalSuma(a)}>+</button>
+                    </td>
+                  })
+                }
+              </tr>
+            </tbody>
+          </table>
+          <section>
             <button onClick={() => handleNuevaRonda()}>Nueva ronda</button>
           </section>
+        </>
+        : 
+        <>
+          <h2>Sin jugadores</h2>
+        </>
+        }
       </section>
   )
 }

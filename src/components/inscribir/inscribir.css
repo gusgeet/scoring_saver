@@ -1,0 +1,37 @@
+.title-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contador-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contador-container input,
+.contador-container button {
+  border-radius: 25px;
+  padding: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .title-container  {
+    flex-direction: column;
+  }
+
+  .contador-container {
+    flex-direction: column;
+  }
+}

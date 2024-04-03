@@ -17,7 +17,7 @@ const NuevaRonda = () => {
   return (
     <section id="nuevaRonda">
       <div>
-        <label>Agregar puntos de nueva ronda</label>
+        <h4>Agregar puntos de nueva ronda</h4>
         { 
           jugadores.map((player, idx) => {
           return <section key={idx} className="puntos-container">
