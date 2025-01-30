@@ -67,12 +67,13 @@ button:focus-visible {
   }
 }
 
-input[type="number"] {
+input[type="tel"] {
   border-radius: 8px;
   padding: 10px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  color: white;
   background-color: #1a1a1a;
   transition: border-color 0.25s;
 }

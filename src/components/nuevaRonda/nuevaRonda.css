@@ -37,3 +37,8 @@
 .puntaje-anotador {
   width: 100px;
 }
+
+#input  {
+  border-radius: 5px;
+  padding: 10px;
+}

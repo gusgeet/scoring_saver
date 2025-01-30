@@ -22,7 +22,10 @@ const NuevaRonda = () => {
           jugadores.map((player, idx) => {
           return <section key={idx} className="puntos-container">
                     <label htmlFor={("puntaje" + player.id)}>{player.nombre}</label>
-                    <input type="number" className="puntaje-anotador" id={("puntaje" + player.id)} min="0" />
+                    <input type="tel" className="puntaje-anotador" id={("puntaje" + player.id)} min="-999" max="99999"
+                       onInput={(e) => {
+                        e.target.value = e.target.value.replace(/(?!^-)\D/g, "");}}
+                     />
                   </section>
           })
         }

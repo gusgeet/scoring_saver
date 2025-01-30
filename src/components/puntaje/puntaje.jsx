@@ -21,7 +21,10 @@ const Puntaje = (Jugador) => {
       <div className='puntaje-agregar'>
         <section>
           <label htmlFor='agregarValor'>Puntos</label>
-          <input id='agregarValor' type='number' min="1" />
+          <input id='agregarValor' type='tel' min="-999"  pattern="-?[0-9]*" max="99999"
+            onInput={(e) => {
+              e.target.value = e.target.value.replace(/(?!^-)\D/g, "");
+            }} />
         </section>
         <button onClick={() => agregarPuntajeAJugador(puntaje.id)}>Agregar</button>
       </div>
